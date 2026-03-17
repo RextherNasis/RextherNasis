@@ -1,16 +1,30 @@
-## Hi there 👋
+# Student Grade Evaluation API
 
-<!--
-**RextherNasis/RextherNasis** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This project is a Flask-based REST API that evaluates student grades
+and determines whether a student passed or failed.
 
-Here are some ideas to get you started:
+## Features
+- Input validation
+- Structured JSON responses
+- Professional Flask architecture
+- Deployable on Render
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## API Endpoint
+
+GET /api/grade
+
+Example Request:
+
+/api/grade?name=Rexther&grade=85
+
+Example Response:
+
+{
+ "success": true,
+ "data": {
+  "student_name": "Rexther",
+  "grade": 85,
+  "passing_grade": 75,
+  "result": "Passed"
+ }
+}
