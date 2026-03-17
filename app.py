@@ -1,14 +1,6 @@
-from flask import Flask, jsonify, request
-app = Flask(__name__)
+from app import create_app
 
-@app.route('/')
-def home():
-return "Welcome to my Flask API!"
+app = create_app()
 
-@app.route('/student')
-def get_student():
-return jsonify({
-"name": "Rexther",
-"grade": 12,
-"section": "Firebase"
-})
+if __name__ == "__main__":
+    app.run(debug=True)
